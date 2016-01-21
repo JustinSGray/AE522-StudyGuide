@@ -5,6 +5,7 @@
 \usepackage[a4paper, margin=1in]{geometry}
 \usepackage{amsmath}
 \usepackage{float}
+\usepackage[usenames, dvipsnames]{color}
 
 \renewcommand\thesubsection{(\roman{subsection})}
 \makeatletter
@@ -17,7 +18,7 @@
 \begin{document}
     \maketitle
 
-    \section{Basic Concepts}
+    \section{Basic Concepts - \colorbox{Yellow}{Week 1}}
     \subsection{Properties of Composites}
     \begin{itemize}
         \item{Out-of-plane properties are generally very weak}
@@ -38,7 +39,7 @@
         \item{Carbon fiber: 225-500 GPa modulus, 3400-6400 MPa strength}
     \end{itemize}
 
-    \section{Lamina Stress-Strain Relationships}
+    \section{Lamina Stress-Strain Relationships - \colorbox{Yellow}{Week 1}}
     \subsection{Stress-Strain Basics}
 
     \begin{figure}[H]
@@ -80,12 +81,9 @@
 
     TODO: flesh this out, include 6x6 for special cases
 
-
     \subsection{Generally Orthotropic Lamina}
 
-
-
-    \section{Effective Moduli of a Continuous Fiber-Reinforced Lamina}
+    \section{Effective Moduli of a Continuous Fiber-Reinforced Lamina - \colorbox{Yellow}{Week 2}}
 
     \subsection{Elementary Mechanics of Materials}
 
@@ -93,7 +91,7 @@
 
     \subsection{Micromechanics}
 
-    \section{Strength of a Lamina}
+    \section{Strength of a Lamina - \colorbox{Yellow}{Week 3}}
 
     \subsection{Maximum Strength}
 
@@ -101,7 +99,7 @@
 
     \subsection{Maximum Strain}
 
-    \section{Analysis of Laminates}
+    \section{Analysis of Laminates - \colorbox{Yellow}{Week 3}}
 
     \subsection{Basics}
 
@@ -113,7 +111,7 @@
 
     \subsubsection{Special Properties}
 
-    \subsection{Laminate-Force Relations}
+    \subsection{Laminate-Force Relations - \colorbox{Yellow}{Week 4}}
 
     \subsubsection{Determining Strain}
 
@@ -121,12 +119,33 @@
 
     \subsection{Hygrothermal Effects}
 
+    \section{Previous Qual Questions - \colorbox{Yellow}{Week 5}}
 
+    \subsection{Fall 2015}
 
+    \begin{enumerate}
+    \item{By conducting two tests (you can use as many strain sensors you want), determine $E_1$, $E_2$, $\nu_{12}$, $\nu_{21}$, $G_{12}$
+for a lamina. You cannot apply pure shear - you can only apply normal stress and rotate the lamina
+with some angle to make it not aligned with the load.}
+    \item{Choose a configuration (I chose 90/0/0/90) for a laminate. Perform three tests to obtain $E_x$, $E_y$, $\nu_{12}$, $\nu_{21}$, $G_{12}$.}
+    \item{Can we determine lamina properties from the laminate properties? (My answer is
+yes: you can write $E_x$ , ..., $G_{xy}$ as some linear function of $E_1$ , ..., $G_{12}$ . Then you just solve this linear
+equations set. But Sodano did not tell me it’s correct or not.)}
+    \end{enumerate}
 
+    \subsection{Winter 2015}
 
-    \section{Previous Qual Questions}
+    \begin{figure}[H]
+        \includegraphics[width=16cm]{516_2015}\centering
+        \label{fig:3}
+    \end{figure}
 
-    TODO: Add previous qual questions, esp. written on Dave's sheet
+    \subsection{Winter 2014}
+
+    \begin{figure}[H]
+        \includegraphics[width=16cm]{516_2014}\centering
+        \label{fig:4}
+    \end{figure}
+
 
 \end{document}
