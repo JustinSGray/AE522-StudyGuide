@@ -15,12 +15,45 @@
 \newcommand\partderivtwo[2]{\frac{\partial^2 #1}{\partial^2 #2}}
 \newcommand\matderiv[2]{\frac{D #1}{D #2}}
 \newcommand\kdel[1]{\delta_{#1}}
+\newcommand\half{\frac{1}{2}}
 
 \newcommand\hcancel[2][black]{\setbox0=\hbox{$#2$}%
 \rlap{\raisebox{.45\ht0}{\textcolor{#1}{\rule{\wd0}{1pt}}}}#2}  
 
 
 \setitemize{itemsep=0pt}
+
+\section{Fundamental Equations}
+    \subsection{Conservation of Mass}
+        \begin{itemize}
+        \item $\partderiv{\rho}{t} + \underbrace{\partderiv{}{x_i}\left( \rho V_i \right)}_{\text{mass flux}} = 0$
+        \end{itemize}
+    \subsection{Conservation of Momentum}
+        Bulk Viscosity
+        \begin{itemize} 
+        \item $\sigma_{ij} = -p \kdel{ij} + \tau_{ij}$
+        \item $\tau_{ij} = 2 \mu \varepsilon_{ij} + \lambda \partderiv{V_q}{x_q}\kdel{ij}$
+        \item $\varepsilon_{ij} = \half\left( \partderiv{V_i}{x_j} + \partderiv{V_j}{x_i} \right)$; $\varepsilon_{ii} = \partderiv{V_i}{x_i}$(no sum)
+        \item $\bar{p} = -\frac{1}{3} \sigma_{ii} = -\frac{1}{3} \left( -p \kdel{ii} + \tau_{ii} \right) = %
+        p - \left(\frac{2}{3}\mu  + \lambda \right)\partderiv{V_i}{x_i}$
+        \end{itemize}
+        Conservation of Momentum
+        \begin{itemize}
+        \item $\partderiv{(\rho V_i)}{t} + \partderiv{(\rho V_i V_j)}{x_i} = \rho f_i + \partderiv{\sigma_{ij}}{x_j}$ 
+        \item $\partderiv{(\rho V_i)}{t} + \partderiv{(\rho V_i V_j)}{x_i} = \rho f_i - %
+        \partderiv{p}{x_i} + \partderiv{\tau_{ij}}{x_j}$ 
+        \item $\partderiv{(\rho V_i)}{t} + \partderiv{(\rho V_i V_j)}{x_i} = \rho f_i - %
+        \partderiv{p}{x_i} + \partderiv{}{x_j} \left(  2 \mu \varepsilon_{ij} + \lambda \partderiv{V_q}{x_q}\kdel{ij} \right)$ 
+        \item $\partderiv{(\rho V_i)}{t} + \partderiv{(\rho V_i V_j)}{x_i} = \rho f_i - %
+        \partderiv{p}{x_i} + \partderiv{}{x_j} \left(  2 \mu \left( \partderiv{V_i}{x_j} + \partderiv{V_j}{x_i} \right) +%
+        \lambda \partderiv{V_q}{x_q}\kdel{ij} \right)$ 
+        \end{itemize}
+        Via Conservation of Mass
+        \begin{equation*}
+        \rho \matderiv{V_i}{t} = \rho f_i - %
+        \partderiv{p}{x_i} + \partderiv{}{x_j} \left(  2 \mu \left( \partderiv{V_i}{x_j} + \partderiv{V_j}{x_i} \right) +%
+        \lambda \partderiv{V_q}{x_q}\kdel{ij} \right)
+        \end{equation*}
 
 \section{Important Concepts}
     \subsection{Newtonian Fluids}
